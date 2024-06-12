@@ -27,9 +27,8 @@ app.use(bodyParser.json());
 app.use(cors(
     {
         origin: 'https://shoesense.vercel.app/',
-        methods: 'GET,POST,PUT,DELETE',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization'],
-        credentials: true,
     }
 ));
 
