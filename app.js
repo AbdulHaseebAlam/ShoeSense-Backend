@@ -45,9 +45,9 @@ app.post('/braintree/payment', requireSignIn, brainTreePaymentController);
 app.put('/updateAddress', updateAddressControlller);
 
 // GET
-// app.get("/", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-// });
+app.get("/", (req, res) => {
+    res.send("<h1>I am Runnning Perfectly</h1>");
+});
 
 app.get('/products/featured-products', featuredProducts);
 app.get('/products/latestProducts', latestProducts);
