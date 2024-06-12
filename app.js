@@ -24,7 +24,14 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
+
+const corsOptions = {
+    origin: 'https://shoesense.vercel.app', // your frontend URL
+    credentials: true, // allows cookies to be sent with requests
+};
+
+
+app.use(cors(corsOptions));
 
 connectDB();
 
@@ -58,5 +65,3 @@ app.get('/checkAuth', requireSignIn, (req, res) => {
 app.listen('3000', function () {
     console.log("server is running on Port 3000");
 });
-
-app.use(cors());    
