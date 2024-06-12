@@ -58,3 +58,5 @@ app.get('/checkAuth', requireSignIn, (req, res) => {
 app.listen('3000', function () {
     console.log("server is running on Port 3000");
 });
+
+app.use(cors());    
